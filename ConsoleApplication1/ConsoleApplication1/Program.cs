@@ -104,33 +104,43 @@ namespace ConsoleApplication1
             List<Employee> myEmployeeList = new List<Employee>();
 
             bool Program = true;
+            for (int i = 0; i <= myEmployeeList.Count; i++)
 
-            while (Program)
+                while (Program)
+            {
+               
+                {                   
 
-                for (int i = 0; i <= myEmployeeList.Count; i++)
-                {
+                    Employee employee = new Employee();
 
-                    myEmployeeList.Add(new Employee());
                     Console.WriteLine("Please enter employee first name\n");
-                    myEmployeeList[i].FirstName = Console.ReadLine();
+                    employee.FirstName = Console.ReadLine();
                     Console.Clear();
+
                     Console.WriteLine("Please enter employee last name\n");
-                    myEmployeeList[i].LastName = Console.ReadLine();
+                    employee.LastName = Console.ReadLine();
                     Console.Clear();
+
                     Console.WriteLine("Please enter employee social security number (no spaces)\n");
-                    myEmployeeList[i].SSNumber = Convert.ToInt32(Console.ReadLine());
+                    employee.SSNumber = Convert.ToInt32(Console.ReadLine());
                     Console.Clear();
+
                     Console.WriteLine("Please enter hire date\n");
-                    myEmployeeList[i].Hire = Convert.ToDateTime(Console.ReadLine());
+                    employee.Hire = Convert.ToDateTime(Console.ReadLine());
                     Console.Clear();
+
                     Console.WriteLine("Please enter employee pay grade. (1-5)\n");
-                    myEmployeeList[i].PayGrade = Convert.ToInt32(Console.ReadLine());
+                    employee.PayGrade = Convert.ToInt32(Console.ReadLine());
                     Console.Clear();
+
                     Console.WriteLine("Please enter employee pay rate\n");
-                    myEmployeeList[i].Rate = Convert.ToDouble(Console.ReadLine());
+                    employee.Rate = Convert.ToDouble(Console.ReadLine());
                     Console.Clear();
+
+                    myEmployeeList.Add(employee);
+
                     Console.WriteLine("Employee saved!\n");
-                    Console.WriteLine("Would you like to add another employee? (y/n)");                    
+                    Console.WriteLine("Would you like to add another employee? (y/n)");
                     string answer = Console.ReadLine();
                     Console.Clear();
                     if (answer.Substring(0, 1).ToLower() == "n")
@@ -138,7 +148,13 @@ namespace ConsoleApplication1
                         Program = false;
                         break;
                     }
+                    else
+                    {
+
+                        Program = true;
+                    }
                 }
+            }
             for (int i = 0; i < myEmployeeList.Count; i++)
             {
                 Console.WriteLine(string.Format("The employee named {0} {1} is going to be paid {2:C}", myEmployeeList[i].FirstName,
