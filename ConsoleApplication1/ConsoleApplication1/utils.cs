@@ -20,7 +20,7 @@ namespace ConsoleApplication1
                     Console.WriteLine(" ");
                 }
                 else {                 
-                    Console.WriteLine(myArray[i].FirstName + " has been paid. " + "$" + myArray[i].Rate * myArray[i].HoursWorked + " dollars.");
+                    Console.WriteLine(myArray[i].FirstName + " has been paid " + "$" + myArray[i].Rate * myArray[i].HoursWorked + " dollars.");
                     Console.WriteLine(" ");
                 }
             }

@@ -10,8 +10,7 @@ namespace ConsoleApplication1
     {
         #region variables
         protected int payGrade, hours;
-        protected DateTime hireDate;
-        protected DateTime termDate;
+        protected DateTime hireDate, termDate;
         double payRate;
         Department empDepartment;
         #endregion
