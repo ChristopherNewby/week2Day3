@@ -104,12 +104,12 @@ namespace ConsoleApplication1
             List<Employee> myEmployeeList = new List<Employee>();
 
             bool Program = true;
-            for (int i = 0; i <= myEmployeeList.Count; i++)
+           // for (int i = 0; i <= myEmployeeList.Count; i++)
 
                 while (Program)
             {
                
-                {                   
+                {
 
                     Employee employee = new Employee();
 
